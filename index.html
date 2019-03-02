@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Techy Unit</title>
-  <!-- <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Roboto|Roboto+Condensed" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Roboto|Roboto+Condensed" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 <link href="styles.css" rel="stylesheet"></head>
 <body class="font-sans text-dark antialiased leading-tight relative">
     <header class="mt-1">
-      <nav class="container mx-auto px-6 flex items-center justify-between flex-wrap" id="nav">
+      <nav class="container mx-auto px-6 flex items-center justify-between flex-wrap lg:bg-transparent" id="nav">
         <div class="flex items-center flex-no-shrink text-white mr-6">
           <span class="font-semibold text-xl tracking-tight uppercase text-dark">Techy Unit</span>
         </div>
@@ -42,7 +42,7 @@
             Tired of getting disappointed <br /> from freelancers?
           </h1>
           <p class="text-2xl text-yellow-darker mb-8">Let’s bring your idea to life.</p>
-          <button class="text-dark shadow font-bold bg-white hover:bg-grey-lightest tracking-wide uppercase px-6 py-3 rounded">Learn more</button>
+          <a href="#about" class="text-dark shadow no-underline font-bold bg-white hover:bg-grey-lightest tracking-wide uppercase px-6 py-3 rounded">Learn more</a>
         </div>
       </section>
       <section class="about-section bg-white" id="about">
@@ -52,14 +52,14 @@
               <div class="h-1 w-48 mx-auto bg-primary"></div>
           </div>
           <p class="font-display text-4xl sm:text-5xl md:text-5xl mb-8">
-            Techy Unit is a creative digital agency based in Manila, Philippines. We are composed of creative designers and experienced developers.
+            Techy Unit is a creative digital agency based in Calabar, Nigeria. We are composed of creative designers and experienced developers.
           </p>
         </div>
       </section>
       <section class="bg-grey-lighter" id="services">
         <div class="container text-center lg:max-w-screen-lg mx-auto px-6 py-8 sm:py-16 md:py-24">
           <h2 class="text-xl font-semibold mb-4 uppercase tracking-wide">At Your Service</h2>
-          <p class="mb-12">Lorem ipsum Elit ut consequat veniam eu nulla nulla</p>
+          <p class="mb-12">Expert web design, web development and mobile app development services.</p>
           <div class="flex flex-wrap -mx-6">
             <div class="w-full md:w-1/2 lg:w-1/3 px-3 flex flex-col mb-8">
               <div class="bg-white rounded-lg shadow-lg hover:shadow-raised hover:translateY-2px transition flex-1 flex flex-col overflow-hidden">
@@ -69,7 +69,7 @@
                   </div>
                   <h3 class="mb-2 block">Web design</h3>
                   <p class="text-grey-dark leading-normal">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, laborum voluptatum magnam quam amet voluptate voluptates laudantium ducimus.
+                    Our web design offerings come with responsive and unique features that make your brand stand out from the crowd.
                   </p>
                 </div>
               </div>
@@ -82,7 +82,7 @@
                   </div>
                   <h3 class="mb-2 block">Web development</h3>
                   <p class="text-grey-dark leading-normal">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, laborum voluptatum magnam quam amet voluptate voluptates laudantium ducimus.
+                    Our web development process is geared toward an intuitive experience for users. We create products that are both aesthetically pleasing and user friendly.
                   </p>
                 </div>
               </div>
@@ -95,7 +95,7 @@
                   </div>
                   <h3 class="mb-2 block">Mobile app development</h3>
                   <p class="text-grey-dark leading-normal">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, laborum voluptatum magnam quam amet voluptate voluptates laudantium ducimus.
+                    Our mobile app development services offer modern, feature-rich solutions for iOS, Android and cross-platform mobile apps. We also build amazing wearable solutions.
                   </p>
                 </div>
               </div>
@@ -156,6 +156,8 @@
 
           const id = e.target.getAttribute('href').substr(1)
           const targetElement = document.getElementById(id)
+          
+          window.location.hash = '#' + id
 
           if (targetElement !== null) {
             offset = targetElement.offsetTop
