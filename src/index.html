@@ -156,13 +156,13 @@
 
           const id = e.target.getAttribute('href').substr(1)
           const targetElement = document.getElementById(id)
-          
-          window.location.hash = '#' + id
 
           if (targetElement !== null) {
             offset = targetElement.offsetTop
             y = document.documentElement.scrollTop
           }
+
+          window.location.hash = '#' + id
         })
       })
 
